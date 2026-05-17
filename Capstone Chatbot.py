@@ -1,8 +1,8 @@
 from turtle import *
 from random import randint
-from _tkinter import *
+import sys
 
-# Defining The Functions
+
 # 1) About Me
 
 def about_me():
@@ -12,7 +12,7 @@ def about_me():
 
     am1 = int(input("What is your age? "))
     if am1 < 100:
-        print(f"Nice!")
+        print("Nice!")
     else:
         print("Oh, come on don't lie!")
     print()
@@ -31,16 +31,10 @@ def about_me():
         print(f"{am3} is okay.")
     print()
 
-    am4 = input("What is you dream? ").lower()
-    print("I hope you will be sucessfull! ")
+    input("What is your dream? ")
+    print("I hope you will be successful!")
 
     print()
-    exit1 = input("Do you want to return to home [Y/N] ").lower()
-    if exit1 == "y":
-      options()
-
-    else:
-        exit()
 
 
 # 2) Jokes
@@ -50,29 +44,22 @@ def jokes():
     print("I bet you'll laugh!")
     print()
 
-    j1 = input("What did the shark say when he ate the clownfish? ")
-    print(input("This tastes a little funny"))
+    input("What did the shark say when he ate the clownfish? ")
+    print("This tastes a little funny")
     print()
 
-    j2 = input("What did the pirate say when he turned 80? ")
-    print(input("Aye matey"))
+    input("What did the pirate say when he turned 80? ")
+    print("Aye matey")
     print()
 
-    j3 = input("What did the buffalo say when his son left for college? ")
-    print(input("Bison"))
+    input("What did the buffalo say when his son left for college? ")
+    print("Bison")
     print()
 
-    j4 = input("What is an astronaut's favorite part of the keyboard? ")
-    print(input("The space bar"))
+    input("What is an astronaut's favorite part of the keyboard? ")
+    print("The space bar")
     print()
 
-    print()
-    exit2 = input("Do you want to return to home [Y/N] ").upper()
-    if exit2 == "Y":
-      options()
-
-    else:
-      exit()
 
 # 3) Flag Quiz
 
@@ -81,18 +68,21 @@ def flag():
     print("Let's go!")
     print()
 
+    # INDIA
+
     def recs(hexacode):
-      penup()
-      fillcolor(hexacode)
-      begin_fill()
+        penup()
+        fillcolor(hexacode)
+        begin_fill()
 
-      for x in range(2):
-        forward(200)
-        left(90)
-        forward(50)
-        left(90)
+        for x in range(2):
+            forward(200)
+            left(90)
+            forward(50)
+            left(90)
 
-      end_fill()
+        end_fill()
+
     recs("#FF671F")
     right(90)
 
@@ -102,15 +92,18 @@ def flag():
     left(90)
 
     recs("#138808")
+
     goto(100, -45)
     pendown()
     pencolor("#06038D")
     pensize(3)
 
     circle(20)
+
     penup()
     goto(100, -25)
     pendown()
+
     a = 360 / 24
 
     for i in range(24):
@@ -123,26 +116,30 @@ def flag():
     hideturtle()
 
     fq1 = input("#1 What is this flag : ").lower()
-    if fq1 == "india" :
-        print("CORRECT! That was an easy one.")
 
+    if fq1 == "india":
+        print("CORRECT! That was an easy one.")
     else:
         print("INCORRECT, It was India.")
 
     print()
     reset()
 
+    # FRANCE
+
     def rectangle(hexacode):
-      penup()
-      fillcolor(hexacode)
-      begin_fill()
-      for x in range(2):
+        penup()
+        fillcolor(hexacode)
+        begin_fill()
+
+        for x in range(2):
+            forward(50)
+            left(90)
+            forward(100)
+            left(90)
+
+        end_fill()
         forward(50)
-        left(90)
-        forward(100)
-        left(90)
-      end_fill()
-      forward(50)
 
     rectangle("#002555")
     rectangle("#FFFFFF")
@@ -151,37 +148,41 @@ def flag():
     hideturtle()
 
     fq2 = input("#2 What is this flag : ").lower()
-    if fq2 == "france" :
-        print("CORRECT, Going great!")
 
+    if fq2 == "france":
+        print("CORRECT, Going great!")
     else:
         print("INCORRECT, It was France.")
 
     print()
     reset()
 
-    def rectangle(hexacode):
-      penup()
-      fillcolor(hexacode)
-      begin_fill()
-      for x in range(2):
-        forward(50)
-        left(90)
-        forward(100)
-        left(90)
-      end_fill()
-      forward(50)
+    # ITALY
 
-    rectangle("#008C45")
-    rectangle("#F4F9FF")
-    rectangle("#CD212A")
+    def rectangle2(hexacode):
+        penup()
+        fillcolor(hexacode)
+        begin_fill()
+
+        for x in range(2):
+            forward(50)
+            left(90)
+            forward(100)
+            left(90)
+
+        end_fill()
+        forward(50)
+
+    rectangle2("#008C45")
+    rectangle2("#F4F9FF")
+    rectangle2("#CD212A")
 
     hideturtle()
 
     fq3 = input("#3 What is this flag : ").lower()
-    if fq3 == "italy" :
-        print("CORRECT, Third time's the lucky charm!")
 
+    if fq3 == "italy":
+        print("CORRECT, Third time's the lucky charm!")
     else:
         print("INCORRECT, It was Italy.")
 
@@ -189,61 +190,65 @@ def flag():
     reset()
     goto(0, 0)
 
-    def recs(hexacode):
-      fillcolor(hexacode)
-      begin_fill()
+    # RUSSIA
 
-      for x in range(2):
-        forward(250)
-        left(90)
-        forward(50)
-        left(90)
-      end_fill()
+    def recs2(hexacode):
+        fillcolor(hexacode)
+        begin_fill()
 
-    recs("#FFFFFF")
+        for x in range(2):
+            forward(250)
+            left(90)
+            forward(50)
+            left(90)
+
+        end_fill()
+
+    recs2("#FFFFFF")
+
     right(90)
     forward(50)
     left(90)
 
-    recs("#1C3578")
+    recs2("#1C3578")
+
     right(90)
     forward(50)
     left(90)
 
-    recs("#E4181C")
+    recs2("#E4181C")
 
     fq4 = input("#4 What is this flag : ").lower()
-    if fq4 == "russia" :
-      print("CORRECT, That was a guess!")
 
+    if fq4 == "russia":
+        print("CORRECT, That was a guess!")
     else:
-      print("INCORRECT, It was Russia!")
+        print("INCORRECT, It was Russia!")
 
     print()
     reset()
 
-    exit3 = input("Do you want to return to home [Y/N] ").upper()
-    if exit3 == "Y":
-        options()
 
-    else:
-        exit()
-
-
-# Calculator
+# 4) Calculator
 
 def calc():
     print("You have chosen option 4 - Calculator")
     print("Welcome to the Alexa Calculator!")
     print()
-    question = input("Please enter A for Addition, S for Subtraction, M for Multiplication, and D for Division: ").upper()
+
+    question = input(
+        "Please enter A for Addition, S for Subtraction, M for Multiplication, and D for Division: "
+    ).upper()
+
     print()
+
     num1 = float(input("Please enter the first number: "))
     print()
+
     num2 = float(input("Please enter the second number: "))
     print()
 
-    def sum(a, b):
+    def add(a, b):
         return a + b
 
     def difference(a, b):
@@ -256,49 +261,64 @@ def calc():
         return a / b
 
     if question == "A":
-        ans = sum(num1, num2)
+        ans = add(num1, num2)
         print(f"The sum of {num1} and {num2} is {ans}.")
+
     elif question == "S":
         ans = difference(num1, num2)
         print(f"The difference between {num1} and {num2} is {ans}.")
+
     elif question == "M":
         ans = product(num1, num2)
         print(f"The product of {num1} and {num2} is {ans}.")
+
     elif question == "D":
-        ans = quotient(num1, num2)
-        print(f"The quotient of {num1} and {num2} is {ans}.")
+
+        if num2 == 0:
+            print("Cannot divide by zero.")
+
+        else:
+            ans = quotient(num1, num2)
+            print(f"The quotient of {num1} and {num2} is {ans}.")
+
     else:
         print("That was an invalid entry. Please try again!")
 
     print()
-    exit4 = input("Do you want to return to home [Y/N] ").upper()
-    if exit4 == "Y":
-        options()
 
-    else:
-        exit()
 
-#5) Heads or Tails
+# 5) Heads or Tails
 
 def toss():
-    t1 = randint(0, 1)
-    if t1 == 1:
-      print("Heads")
 
-    else:
-        print("Tails")
+    while True:
 
-    print()
-    exit5 = input("Do you want to go home or reroll [H/R]").upper()
-    if exit5 == "H":
-        options()
+        t1 = randint(0, 1)
 
-    else:
-        toss()
+        if t1 == 1:
+            print("Heads")
+        else:
+            print("Tails")
 
-#6) Fahrenheit to Celsius
+        print()
+
+        exit5 = input("Do you want to go home or reroll [H/R] ").upper()
+
+        if exit5 == "H":
+            break
+
+        elif exit5 == "R":
+            continue
+
+        else:
+            print("Invalid choice.")
+            break
+
+
+# 6) Fahrenheit to Celsius
 
 def ftoc():
+
     fahrenheit = int(input("Enter temperature in Fahrenheit: "))
 
     celsius = (fahrenheit - 32) * 5 / 9
@@ -306,25 +326,21 @@ def ftoc():
     print(f"The temperature in Celsius is {celsius}")
 
     print()
-    exit6 = input("Do you want to return to home [Y/N] ").upper()
-    if exit6 == "Y":
-        print()
-        options()
 
-    else:
-        exit()
 
 # Menu function
 
 def name():
-  name = input("Hi, my name is Alexa. What would you like me to call you? ")
-  print()
-  print(f"Hello, {name}!")
-  print("I can perform many things. What would you like to do today?")
-  print()
+    username = input("Hi, my name is Alexa. What would you like me to call you? ")
+
+    print()
+    print(f"Hello, {username}!")
+    print("I can perform many things. What would you like to do today?")
+    print()
+
 
 def options():
-    print()
+
     print("1) About Me")
     print("2) Joke")
     print("3) Flag Quiz")
@@ -333,26 +349,46 @@ def options():
     print("6) Fahrenheit to Celsius")
     print("7) Exit")
 
-    choice = int(input("Please enter your choice [1 - 7]: "))
+    try:
+        choice = int(input("Please enter your choice [1 - 7]: "))
+
+    except ValueError:
+        print("Please enter a valid number.")
+        print()
+        return
+
     print()
 
     if choice == 1:
-      about_me()
+        about_me()
+
     elif choice == 2:
-      jokes()
+        jokes()
+
     elif choice == 3:
-      flag()
+        flag()
+
     elif choice == 4:
-      calc()
+        calc()
+
     elif choice == 5:
-      toss()
+        toss()
+
     elif choice == 6:
-      ftoc()
+        ftoc()
+
     elif choice == 7:
-      exit()
+        print("Goodbye!")
+        sys.exit()
 
     else:
-      print("That was an invalid entry. Please try again!")
+        print("That was an invalid entry. Please try again!")
+
+
+# Main Program
 
 name()
-options()
+
+while True:
+    options()
+    print()
